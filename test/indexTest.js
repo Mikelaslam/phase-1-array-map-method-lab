@@ -18,3 +18,11 @@ describe('index.js', function () {
     });
   });
 });
+const titleCased = () => {
+  return tutorials.map(sentence=>{
+    let words=sentence.split(" ")
+    return words.map(word=>{
+      return word[0].toUpperCase()+ word.slice(1)
+    }).join(" ")
+  })
+}
